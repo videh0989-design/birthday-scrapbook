@@ -1,94 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Happy Birthday ❤️</title>
+    <title>Unlock Your Surprise ❤️</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="password.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-<div class="container">
+    <!-- Floating Hearts -->
 
-    <!-- Background decorations -->
-    <div class="stars"></div>
+    <div class="hearts">
 
-    <!-- Birthday Heading -->
-    <div class="heading">
-
-        <span class="cut red">H</span>
-        <span class="cut white">A</span>
-        <span class="cut pink">P</span>
-        <span class="cut red">P</span>
-        <span class="cut white">Y</span>
-
-        <span class="birthday">Birthday</span>
+        <span>❤</span>
+        <span>❤</span>
+        <span>❤</span>
+        <span>❤</span>
+        <span>❤</span>
+        <span>❤</span>
 
     </div>
 
 
-    <!-- Polaroid -->
+    <!-- Main Card -->
 
-    <div class="polaroid">
+    <div class="container">
 
-        <img src="images/sundar.jpg" alt="Birthday Picture">
+        <div class="lock">
 
-        <div class="caption">
-
-            🍓mahhh migraine trigger 
+            🔐
 
         </div>
 
-    </div>
+        <h1>For Someone Special ❤️</h1>
 
+        <p class="subtitle">
 
-    <!-- Roses Decoration -->
+            Only one person knows the password...
 
-    <div class="roses">
-        🌹🌹🌹
-    </div>
+        </p>
 
+        <!-- Password Input -->
 
-    <!-- Bottom Decorations -->
+        <input
+            type="password"
+            id="password"
+            placeholder="Enter Password">
 
-    <div class="bottom">
+        <!-- Button -->
 
-        <!-- Cat -->
+        <button onclick="checkPassword()">
 
-        <img class="cat" src="images/download (2).jpg" alt="Cute Cat">
+            Unlock My Gift 🎁
 
+        </button>
 
-        <!-- Cake + Balloons -->
+        <!-- Message -->
 
-        <img class="cake" src="images/download (3).jpg" alt="Cake">
-
-
-
-    </div>
-
-
-    <!-- Button -->
-
-    <div class="button-container">
-
-        <a href="letter.html">
-
-            <button class="memory-btn">
-
-                💌 Dive Into Memories
-
-            </button>
-
-        </a>
+        <p id="message"></p>
 
     </div>
 
-</div>
+
+    <!-- Hint -->
+
+    <div class="hint">
+
+        💌 Hint: Your Instagram password
+
+    </div>
+
+
+    <!-- JavaScript -->
+
+    <script src="password.js"></script>
 
 </body>
+
 </html>

@@ -48,8 +48,8 @@ function checkPassword() {
 
         setTimeout(function () {
 
-            window.location.href = "index.html";
-
+         window.location.href = "home.html";
+            
         }, 1000);
 
     }
