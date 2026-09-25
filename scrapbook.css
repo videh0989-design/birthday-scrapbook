@@ -1,0 +1,481 @@
+/* ===========================
+   IMPORT FONTS
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:
+    radial-gradient(circle at top,#edf5ff,#dcecff,#cddff7);
+
+    overflow-x:hidden;
+
+}
+
+/* ===========================
+   MAIN PAGE
+=========================== */
+
+.background{
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    padding:60px 20px 120px;
+
+    position:relative;
+
+}
+
+/* ===========================
+   TITLE
+=========================== */
+
+h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:58px;
+
+    color:#654321;
+
+    margin-bottom:10px;
+
+}
+
+.background p{
+
+    font-size:18px;
+
+    color:#6d6d6d;
+
+    margin-bottom:60px;
+
+}
+
+/* ===========================
+   ENVELOPE
+=========================== */
+
+.envelope{
+
+    position:relative;
+
+    width:360px;
+
+    height:240px;
+
+    cursor:pointer;
+
+    perspective:1200px;
+
+    transition:1s;
+
+}
+
+/* Envelope body */
+
+.front{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    background:#d6b77a;
+
+    border-radius:10px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
+
+    z-index:2;
+
+}
+
+/* Decorative paper texture */
+
+.front::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:10px;
+
+    opacity:.18;
+
+    background:
+
+    repeating-linear-gradient(
+
+        45deg,
+
+        rgba(255,255,255,.3),
+
+        rgba(255,255,255,.3) 2px,
+
+        transparent 2px,
+
+        transparent 8px
+
+    );
+
+}
+
+/* Bottom Fold */
+
+.front::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:100%;
+
+    height:100%;
+
+    clip-path:polygon(0 100%,50% 45%,100% 100%);
+
+    background:#cda866;
+
+}
+
+/* ===========================
+   FLAP
+=========================== */
+
+.flap{
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    clip-path:polygon(0 0,100% 0,50% 58%);
+
+    background:#e2c48a;
+
+    transform-origin:top;
+
+    transition:1.2s;
+
+    z-index:6;
+
+}
+
+/* ===========================
+   LETTER
+=========================== */
+
+.letter{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:15px;
+
+    transform:translateX(-50%);
+
+    width:300px;
+
+    height:190px;
+
+    background:#fffdf5;
+
+    border-radius:8px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    transition:1.2s;
+
+    z-index:1;
+
+}
+
+.letter h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    color:#6b4531;
+
+    margin-bottom:10px;
+
+}
+
+.letter p{
+
+    margin:0;
+
+    color:#777;
+
+} 
+/* ===========================================
+   WAX SEAL
+=========================================== */
+
+.seal{
+
+    position:absolute;
+
+    width:62px;
+
+    height:62px;
+
+    background:radial-gradient(circle,#b11f2f,#7c101d);
+
+    border-radius:50%;
+
+    left:50%;
+
+    top:62%;
+
+    transform:translate(-50%,-50%);
+
+    z-index:10;
+
+    box-shadow:
+    0 6px 15px rgba(0,0,0,.25),
+    inset 0 4px 8px rgba(255,255,255,.18);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#ffdca8;
+
+    font-size:24px;
+
+    font-family:"Cormorant Garamond",serif;
+
+}
+
+.seal::before{
+
+    content:"❤";
+
+}
+
+
+
+/* ===========================================
+   OPEN ANIMATION
+=========================================== */
+
+.envelope.open .flap{
+
+    transform:rotateX(180deg);
+
+}
+
+.envelope.open .seal{
+
+    opacity:0;
+
+    transition:.4s;
+
+}
+
+.envelope.open .letter{
+
+    transform:
+    translateX(-50%)
+    translateY(-260px);
+
+}
+
+
+
+/* ===========================================
+   GALLERY
+=========================================== */
+
+.gallery{
+
+    width:100%;
+
+    max-width:700px;
+
+    margin-top:80px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:90px;
+
+    opacity:0;
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:1s;
+
+}
+
+.gallery.show{
+
+    opacity:1;
+
+    max-height:8000px;
+
+}
+
+
+
+/* ===========================================
+   SCRAPBOOK PAGE
+=========================================== */
+
+.page{
+
+    width:90%;
+
+    max-width:500px;
+
+    background:white;
+
+    padding:14px;
+
+    border-radius:22px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.20);
+
+    transform:translateY(120px);
+
+    opacity:0;
+
+    transition:1s;
+
+}
+
+.page img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:16px;
+
+}
+
+
+
+/* Different rotations */
+
+.page:nth-child(odd){
+
+    transform:
+    translateY(120px)
+    rotate(-2deg);
+
+}
+
+.page:nth-child(even){
+
+    transform:
+    translateY(120px)
+    rotate(2deg);
+
+}
+
+
+
+/* Slide one by one */
+
+.gallery.show .page:nth-child(1){
+
+    opacity:1;
+
+    transform:translateY(0) rotate(-2deg);
+
+    transition-delay:.5s;
+
+}
+
+.gallery.show .page:nth-child(2){
+
+    opacity:1;
+
+    transform:translateY(0) rotate(2deg);
+
+    transition-delay:1.3s;
+
+}
+
+.gallery.show .page:nth-child(3){
+
+    opacity:1;
+
+    transform:translateY(0) rotate(-2deg);
+
+    transition-delay:2.1s;
+
+}
+
+.gallery.show .page:nth-child(4){
+
+    opacity:1;
+
+    transform:translateY(0) rotate(2deg);
+
+    transition-delay:2.9s;
+
+}
+
+
+
+/* Hover */
+
+.page:hover{
+
+    transform:scale(1.03) rotate(0deg);
+
+    transition:.4s;
+
+}

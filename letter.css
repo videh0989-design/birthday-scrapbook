@@ -1,0 +1,530 @@
+/* ==============================
+   GOOGLE FONTS
+================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap');
+
+/* ==============================
+RESET
+================================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:80px 20px;
+
+font-family:'Cormorant Garamond',serif;
+
+overflow-x:hidden;
+
+background:
+radial-gradient(circle,#ffffff20 2px,transparent 2px),
+linear-gradient(135deg,#5d2d1c,#3b1f14);
+
+background-size:45px 45px,cover;
+
+}
+
+/* ==============================
+BACKGROUND
+================================= */
+
+.background{
+
+width:100%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+/* ==============================
+OLD PAPER
+================================= */
+
+.paper{
+
+position:relative;
+
+max-width:900px;
+
+width:100%;
+
+padding:70px;
+
+background:
+
+linear-gradient(#d6b36d,#c79b4d);
+
+border-radius:6px;
+
+box-shadow:
+
+0 0 40px rgba(0,0,0,.45),
+
+0 30px 70px rgba(0,0,0,.35);
+
+overflow:hidden;
+
+}
+
+/* torn texture */
+
+.paper::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+right:0;
+
+bottom:0;
+
+background:
+
+url("https://www.transparenttextures.com/patterns/old-wall.png");
+
+opacity:.15;
+
+pointer-events:none;
+
+}
+
+/* burnt border */
+
+.paper::after{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+border:18px solid rgba(85,46,18,.18);
+
+pointer-events:none;
+
+}
+
+/* ==============================
+TORN CORNERS
+================================= */
+
+.corner{
+
+position:absolute;
+
+width:80px;
+
+height:80px;
+
+background:#4e2d18;
+
+filter:blur(10px);
+
+opacity:.15;
+
+}
+
+.corner1{
+
+top:-20px;
+
+left:-20px;
+
+border-radius:0 0 100% 0;
+
+}
+
+.corner2{
+
+top:-20px;
+
+right:-20px;
+
+border-radius:0 0 0 100%;
+
+}
+
+.corner3{
+
+bottom:-20px;
+
+left:-20px;
+
+border-radius:0 100% 0 0;
+
+}
+
+.corner4{
+
+bottom:-20px;
+
+right:-20px;
+
+border-radius:100% 0 0 0;
+
+}
+
+/* ==============================
+TITLE
+================================= */
+
+.paper h1{
+
+font-family:'Dancing Script',cursive;
+
+font-size:60px;
+
+text-align:center;
+
+margin-bottom:45px;
+
+color:#5c2f18;
+
+}
+
+/* ==============================
+LETTER
+================================= */
+
+.letter{
+
+font-family:'Dancing Script',cursive;
+
+font-size:31px;
+
+line-height:1.9;
+
+color:#3d2415;
+
+}
+
+.letter p{
+
+margin-bottom:30px;
+
+text-align:justify;
+
+}
+/* =====================================
+   SIGNATURE
+===================================== */
+
+.signature{
+
+margin-top:60px;
+
+text-align:right;
+
+font-family:'Dancing Script',cursive;
+
+font-size:42px;
+
+color:#5d2d17;
+
+line-height:1.5;
+
+}
+
+/* =====================================
+   NEXT PAGE BUTTON
+===================================== */
+
+.next-page{
+
+display:flex;
+
+justify-content:center;
+
+margin-top:70px;
+
+}
+
+.next-page a{
+
+text-decoration:none;
+
+}
+
+.next-page button{
+
+padding:18px 45px;
+
+font-size:22px;
+
+font-family:'Cormorant Garamond',serif;
+
+border:none;
+
+border-radius:50px;
+
+background:#6d2f20;
+
+color:#f7e8d0;
+
+cursor:pointer;
+
+transition:.4s;
+
+box-shadow:
+
+0 12px 30px rgba(0,0,0,.35);
+
+}
+
+.next-page button:hover{
+
+background:#8d432d;
+
+transform:translateY(-6px);
+
+box-shadow:
+
+0 18px 35px rgba(0,0,0,.45);
+
+}
+
+/* =====================================
+   PARAGRAPH EFFECT
+===================================== */
+
+.letter p:first-letter{
+
+font-size:48px;
+
+font-weight:bold;
+
+color:#7d2b18;
+
+font-family:'Dancing Script',cursive;
+
+}
+
+.letter strong{
+
+color:#7d1f12;
+
+font-weight:600;
+
+}
+
+/* =====================================
+   PAPER SHADOW
+===================================== */
+
+.paper{
+
+transform:rotate(-1deg);
+
+transition:.5s;
+
+}
+
+.paper:hover{
+
+transform:rotate(0deg) scale(1.01);
+
+}
+
+/* =====================================
+   AGED PAPER STAINS
+===================================== */
+
+.paper .stain1{
+
+position:absolute;
+
+width:140px;
+
+height:140px;
+
+background:rgba(120,70,20,.08);
+
+border-radius:50%;
+
+top:120px;
+
+right:70px;
+
+filter:blur(18px);
+
+}
+
+.paper .stain2{
+
+position:absolute;
+
+width:90px;
+
+height:90px;
+
+background:rgba(90,45,18,.10);
+
+bottom:170px;
+
+left:60px;
+
+border-radius:50%;
+
+filter:blur(16px);
+
+}
+
+.paper .stain3{
+
+position:absolute;
+
+width:170px;
+
+height:170px;
+
+background:rgba(150,90,30,.06);
+
+bottom:30px;
+
+right:120px;
+
+border-radius:50%;
+
+filter:blur(28px);
+
+}
+
+/* =====================================
+   PAPER GRAIN
+===================================== */
+
+.paper{
+
+background-image:
+
+linear-gradient(#d5b067,#c59a52),
+
+radial-gradient(circle at 20% 30%,rgba(255,255,255,.12),transparent 35%),
+
+radial-gradient(circle at 80% 70%,rgba(90,40,10,.10),transparent 40%);
+
+background-blend-mode:multiply;
+
+}
+
+/* =====================================
+   SCROLLBAR
+===================================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#6e3b24;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#d8bb7f;
+
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media(max-width:900px){
+
+.paper{
+
+padding:35px;
+
+}
+
+.paper h1{
+
+font-size:42px;
+
+}
+
+.letter{
+
+font-size:22px;
+
+line-height:1.8;
+
+}
+
+.signature{
+
+font-size:32px;
+
+}
+
+.next-page button{
+
+font-size:18px;
+
+padding:15px 30px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+body{
+
+padding:20px 10px;
+
+}
+
+.paper{
+
+padding:25px;
+
+}
+
+.paper h1{
+
+font-size:34px;
+
+}
+
+.letter{
+
+font-size:19px;
+
+}
+
+.signature{
+
+font-size:28px;
+
+}
+
+}
